@@ -98,7 +98,7 @@ export default function MonthProduct() {
 
   return (
     <div className="max-w-[1440px] mx-auto">
-        <div className="lg:mt-[140px] sm:mt-20 mt-10">
+        <div className="lg:mt-[140px] sm:mt-20 mt-10 lg:mb-[140px]">
       <div className="flex items-center gap-2">
         <div className="bg-red-500 w-4 h-9 rounded-md"></div>
         <h3 className="text-red-500 text-base font-semibold">This month </h3>
@@ -175,10 +175,7 @@ export default function MonthProduct() {
         ))}
       </div>
 
-      <div className="flex items-center justify-center my-[60px]">
-        <Button type="primary" danger>View All Products</Button>
-      </div>
-      <hr  className="bg-slate-400 h-[3px] my-4" />
+     
     </div>
     </div>
   );

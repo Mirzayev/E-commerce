@@ -3,7 +3,11 @@ import banner from "../assets/images/banner.png";
 import camera from "../assets/images/camera.png";
 import laptop from "../assets/images/laptop.png";
 import car from '../assets/images/car.png'
+import jacket from '../assets/images/jacket.png'
+import jacket_2 from '../assets/images/jacket_2.png'
+import bag from '../assets/images/bag.png'
 import { Button } from "antd";
+
 
 export default function OurProducts() {
   const products = [
@@ -45,7 +49,7 @@ export default function OurProducts() {
         discount: "-40%",
         price: 120,
         originalPrice: 160,
-        image: joystik,
+        image: jacket,
       },
       {
         id: 6,
@@ -53,7 +57,7 @@ export default function OurProducts() {
         discount: "-35%",
         price: 960,
         originalPrice: 1160,
-        image: klaviatura,
+        image: car,
       },
       {
         id: 7,
@@ -61,7 +65,7 @@ export default function OurProducts() {
         discount: "-30%",
         price: 370,
         originalPrice: 400,
-        image: televizor,
+        image: jacket_2,
       },
       {
         id: 8,
@@ -69,7 +73,7 @@ export default function OurProducts() {
         discount: "-25%",
         price: 375,
         originalPrice: 400,
-        image: chair,
+        image: bag,
       },
   ];
 
@@ -118,7 +122,7 @@ export default function OurProducts() {
         </div>
       </div>
 
-      <div className="flex md:gap-[30px] gap-4 overflow-x-auto  mt-10">
+      <div className="grid grid-cols-4 md:gap-[30px] gap-4  mt-10">
         {products.map((product) => (
           <div className="">
             <div className="md:w-[270px]   md:h-[250px] w-[160px] h-[160px] px-3 py-3 bg-slate-100 relative flex items-center justify-center">
@@ -180,7 +184,6 @@ export default function OurProducts() {
       <div className="flex items-center justify-center my-[60px]">
         <Button type="primary" danger>View All Products</Button>
       </div>
-      <hr  className="bg-slate-400 h-[3px] my-4" />
     </div>
     </div>
   );
