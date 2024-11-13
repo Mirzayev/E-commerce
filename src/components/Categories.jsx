@@ -4,7 +4,7 @@ import smartwatch from '../assets/icons/smartwatch.png'
 export default function Categories() {
   return (
     <div>
-      <div className="max-w-[1440px] mx-auto ">
+      <div className="max-w-[1440px] mx-auto px-5 ">
         <div className="flex items-center gap-2">
           <div className="bg-red-500 w-4 h-9 rounded-md"></div>
           <h3 className="text-red-500 text-base font-semibold">Categories </h3>

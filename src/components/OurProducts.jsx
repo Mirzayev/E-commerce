@@ -100,7 +100,7 @@ export default function OurProducts() {
   }, []);
 
   return (
-    <div className="max-w-[1440px] mx-auto">
+    <div className="max-w-[1440px] mx-auto px-5">
         <div className="lg:mt-[140px] sm:mt-20 mt-10">
       <div className="flex items-center gap-2">
         <div className="bg-red-500 w-4 h-9 rounded-md"></div>
@@ -122,7 +122,7 @@ export default function OurProducts() {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 md:gap-[30px] gap-4  mt-10">
+      <div className="lg:grid lg:grid-cols-4 flex overflow-x-auto md:gap-[30px] gap-4  mt-10">
         {products.map((product) => (
           <div className="">
             <div className="md:w-[270px]   md:h-[250px] w-[160px] h-[160px] px-3 py-3 bg-slate-100 relative flex items-center justify-center">
@@ -184,6 +184,8 @@ export default function OurProducts() {
       <div className="flex items-center justify-center my-[60px]">
         <Button type="primary" danger>View All Products</Button>
       </div>
+
+     
     </div>
     </div>
   );

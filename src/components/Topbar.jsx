@@ -1,6 +1,6 @@
 function Topbar() {
   return (
-    <div className="max-w-[1440px] mx-auto ">
+    <div className="max-w-[1440px] mx-auto px-5">
       <div className=" flex justify-between items-center mt-4 gap-10">
         <div className="hidden sm:block">
           <h3 className="text-2xl font-bold ">Exclusive</h3>

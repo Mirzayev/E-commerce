@@ -97,7 +97,7 @@ export default function MonthProduct() {
   }, []);
 
   return (
-    <div className="max-w-[1440px] mx-auto">
+    <div className="max-w-[1440px] mx-auto px-5">
         <div className="lg:mt-[140px] sm:mt-20 mt-10 lg:mb-[140px]">
       <div className="flex items-center gap-2">
         <div className="bg-red-500 w-4 h-9 rounded-md"></div>
