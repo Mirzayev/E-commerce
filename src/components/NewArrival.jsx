@@ -14,7 +14,7 @@ export default function NewArrival() {
         New Arrival
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 items-center lg:gap-[30px] gap-4 w-full max-h-[400px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 items-center lg:gap-[30px] gap-4 w-full ">
         <div className="w-full">
           <img className="w-full h-auto object-cover" src={reklama_1} alt="Reklama 1" />
         </div>
