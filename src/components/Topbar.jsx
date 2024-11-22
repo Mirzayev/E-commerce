@@ -99,7 +99,9 @@ function Topbar() {
           </div>
           <div className="flex items-center gap-4">
             <i className="fa-regular fa-heart text-2xl cursor-pointer hover:text-green-500 transition"></i>
-            <i className="fa-solid fa-cart-shopping text-2xl cursor-pointer hover:text-green-500 transition"></i>
+            <NavLink to="/cart">
+              <i className="fa-solid fa-cart-shopping text-2xl cursor-pointer hover:text-green-500 transition hidden lg:block"></i>
+            </NavLink>
             <Dropdown
               menu={menuProps}
               trigger={["hover", "click"]}
@@ -109,6 +111,7 @@ function Topbar() {
                 <UserOutlined style={{ fontSize: "20px", color: "white" }} />
               </div>
             </Dropdown>
+            <i className="fa-solid fa-bars block lg:hidden text-xl"></i>
           </div>
         </div>
       </div>
