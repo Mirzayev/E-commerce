@@ -51,7 +51,7 @@ export default function Contact() {
           </div>
           <textarea
             placeholder="Your Message"
-            className="bg-slate-100 w-full lg:mt-8 py-3 px-4 rounded-lg h-[207px] mt-4"
+            className="bg-slate-100 w-full lg:mt-8 py-3 px-4 rounded-lg h-[207px] mt-4 outline-none"
           ></textarea>
 
           <div className="flex justify-end mt-8">

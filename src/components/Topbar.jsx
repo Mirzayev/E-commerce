@@ -55,9 +55,9 @@ function Topbar() {
         </div>
         <div className="md:flex hidden gap-12">
           <NavLink
-            to="/home"
+            to="/"
             className={`font-mono text-base hover:underline ${
-              location.pathname === "/home" ? "font-bold text-red-500" : ""
+              location.pathname === "/" ? "font-bold text-red-500" : ""
             }`}
           >
             Home
