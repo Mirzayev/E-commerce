@@ -10,6 +10,7 @@ import HomeElements from "./components/HomeElements.jsx";
 import SignUp from "./pages/SignUp.jsx";
 import About from "./pages/About.jsx";
 import BasketProduct from "./pages/BasketProduct.jsx";
+import Wishlist from "./pages/Wishlist.jsx";
 
 function App() {
   const route = createBrowserRouter([
@@ -32,6 +33,10 @@ function App() {
         {
           path: "/signUp",
           element: <SignUp/>
+        },
+        {
+          path: "/wishlist",
+          element: <Wishlist/>
         },
         {
           path: "/cart",

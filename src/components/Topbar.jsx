@@ -98,8 +98,10 @@ function Topbar() {
             <i className="fa-solid fa-magnifying-glass text-lg cursor-pointer"></i>
           </div>
           <div className="flex items-center gap-4">
+            <NavLink to="wishlist">
             <i className="fa-regular fa-heart text-2xl cursor-pointer hover:text-green-500 transition"></i>
-            <NavLink to="/cart">
+            </NavLink>
+            <NavLink to="cart">
               <i className="fa-solid fa-cart-shopping text-2xl cursor-pointer hover:text-green-500 transition hidden lg:block"></i>
             </NavLink>
             <Dropdown
