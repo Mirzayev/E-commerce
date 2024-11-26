@@ -8,7 +8,7 @@ import Emma from "../assets/images/emmaWatson.png";
 import Simth from "../assets/images/Smith.png";
 export default function About() {
   return (
-    <div className="lg:mt-[140px] px-4 mt-8">
+    <div className="lg:mt-[140px] px-4 mt-8 mx-auto max-w-[1920px]">
       <div className="flex sm:flex-col flex-col-reverse  md:flex-row gap-10 items-center md:pl-[135px]">
         <div>
           <h2 className="text-[36px] md:text-[54px] font-semibold mb-6 md:mb-10 ">Our Story</h2>

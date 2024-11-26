@@ -80,7 +80,7 @@ function Topbar() {
           </NavLink>
           <NavLink
             to="signUp"
-            className={`font-mono text-base hover:underline ${
+            className={`font-mono text-base hover:underline transition-shadow ${
               location.pathname === "/signUp" ? "font-bold text-red-500" : ""
             }`}
           >

@@ -3,7 +3,7 @@ import basket from "../assets/images/registr.png";
 
 export default function SignUp() {
   return (
-    <div className="mt-[60px] flex flex-col lg:flex-row gap-10 lg:gap-[130px] items-center px-3">
+    <div className="lg:mt-[60px] mt-10 flex flex-col lg:flex-row gap-10 lg:gap-[130px] items-center px-3 max-w-[1920px] mx-auto">
       <img
         src={basket}
         className="w-full max-w-[500px] lg:max-w-[805px] object-cover"

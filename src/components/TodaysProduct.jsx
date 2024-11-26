@@ -159,6 +159,10 @@ export default function TodaysProduct() {
           </Button>
         </div>
         <hr className="bg-slate-400 h-[3px] my-4" />
+        <canvas id="myCanvas" width="200" height="200"></canvas>
+
+
+
       </div>
     </div>
   );
