@@ -7,44 +7,19 @@ import { Button } from "antd";
 
 export default function TodaysProduct() {
   const products = [
-    {
-      id: 1,
-      name: "HAVIT HV-G92 Gamepad",
-      discount: "-40%",
-      price: 120,
-      originalPrice: 160,
-      image: joystik,
-    },
-    {
-      id: 2,
-      name: "AK-900 Wired Keyboard",
-      discount: "-35%",
-      price: 960,
-      originalPrice: 1160,
-      image: klaviatura,
-    },
-    {
-      id: 3,
-      name: "IPS LCD Gaming Monitor",
-      discount: "-30%",
-      price: 370,
-      originalPrice: 400,
-      image: televizor,
-    },
-    {
-      id: 4,
-      name: "S-Series Comfort Chair",
-      discount: "-25%",
-      price: 375,
-      originalPrice: 400,
-      image: chair,
-    },
+    { id: 1, name: "HAVIT HV-G92 Gamepad", discount: "-40%", price: 120, originalPrice: 160, image: joystik },
+    { id: 2, name: "AK-900 Wired Keyboard", discount: "-35%", price: 960, originalPrice: 1160, image: klaviatura },
+    { id: 3, name: "IPS LCD Gaming Monitor", discount: "-30%", price: 370, originalPrice: 400, image: televizor },
+    { id: 4, name: "S-Series Comfort Chair", discount: "-25%", price: 375, originalPrice: 400, image: chair }, 
+    { id: 5, name: "HAVIT HV-G92 Gamepad", discount: "-40%", price: 120, originalPrice: 160, image: joystik },
+    { id: 6, name: "AK-900 Wired Keyboard", discount: "-35%", price: 960, originalPrice: 1160, image: klaviatura },
+    { id: 7, name: "IPS LCD Gaming Monitor", discount: "-30%", price: 370, originalPrice: 400, image: televizor },
+    { id: 8, name: "S-Series Comfort Chair", discount: "-25%", price: 375, originalPrice: 400, image: chair },
   ];
 
   const [favorites, setFavorites] = useState([]);
-  const [cart, setCart] = useState([]);
-  const [rating, setRating] = useState(0);
-  const [hover, setHover] = useState(0);
+  const [ratings, setRatings] = useState({});
+  const [hover, setHover] = useState({});
   const [starSize, setStarSize] = useState(32);
 
   useEffect(() => {
@@ -66,17 +41,19 @@ export default function TodaysProduct() {
   }, []);
 
   const handleHeartClick = (product) => {
-    // Yurak holatini o'zgartirish
     if (favorites.includes(product.id)) {
       setFavorites(favorites.filter((id) => id !== product.id));
     } else {
       setFavorites([...favorites, product.id]);
-
-      // Mahsulotni savatga qo'shish
-      if (!cart.find((item) => item.id === product.id)) {
-        setCart([...cart, product]);
-      }
     }
+  };
+
+  const handleRatingClick = (productId, value) => {
+    setRatings((prev) => ({ ...prev, [productId]: value }));
+  };
+
+  const handleHover = (productId, value) => {
+    setHover((prev) => ({ ...prev, [productId]: value }));
   };
 
   return (
@@ -87,7 +64,7 @@ export default function TodaysProduct() {
           <h3 className="text-red-500 text-base font-semibold">Today's</h3>
         </div>
 
-        <div className="flex md:gap-[30px] gap-4 overflow-x-auto mt-10">
+        <div style={{scrollbarWidth: 'none'}} className="flex md:gap-[30px] gap-4 overflow-x-auto mt-10">
           {products.map((product) => (
             <div key={product.id}>
               <div className="md:w-[270px] md:h-[250px] w-[160px] h-[160px] px-3 py-3 bg-slate-100 relative flex items-center justify-center">
@@ -112,9 +89,7 @@ export default function TodaysProduct() {
               <p className="text-base font-semibold my-4">{product.name}</p>
               <div className="flex items-center gap-4">
                 <p className="text-red-600 font-semibold">${product.price}</p>
-                <strike className="text-slate-500 font-semibold">
-                  ${product.originalPrice}
-                </strike>
+                <strike className="text-slate-500 font-semibold">${product.originalPrice}</strike>
               </div>
 
               <div className="flex items-center gap-2">
@@ -125,18 +100,17 @@ export default function TodaysProduct() {
                       <label key={starValue}>
                         <input
                           type="radio"
-                          name="rating"
+                          name={`rating-${product.id}`}
                           value={starValue}
-                          onClick={() => setRating(starValue)}
+                          onClick={() => handleRatingClick(product.id, starValue)}
                           style={{ display: "none" }}
                         />
                         <span
                           className="star"
-                          onMouseEnter={() => setHover(starValue)}
-                          onMouseLeave={() => setHover(0)}
+                          onMouseEnter={() => handleHover(product.id, starValue)}
+                          onMouseLeave={() => handleHover(product.id, 0)}
                           style={{
-                            color:
-                              starValue <= (hover || rating) ? "gold" : "gray",
+                            color: starValue <= (hover[product.id] || ratings[product.id]) ? "gold" : "gray",
                             cursor: "pointer",
                             fontSize: `${starSize}px`,
                           }}
@@ -147,7 +121,7 @@ export default function TodaysProduct() {
                     );
                   })}
                 </div>
-                <h3>({rating + 83})</h3>
+                <h3>({ratings[product.id] || 0} reviews)</h3>
               </div>
             </div>
           ))}
@@ -160,9 +134,6 @@ export default function TodaysProduct() {
         </div>
         <hr className="bg-slate-400 h-[3px] my-4" />
         <canvas id="myCanvas" width="200" height="200"></canvas>
-
-
-
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 
-import Footer from "../components/Footer"
+import Footer from "../../components/Footer"
 
-import Topbar from "../components/Topbar"
+import Topbar from "../../components/Topbar"
 import { Outlet } from "react-router-dom"
 
  function Home(){

@@ -1,13 +1,13 @@
-import { useState } from "react";
-import Contact from "./pages/Contact.jsx";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/home/Home.jsx";
 import HomeElements from "./components/HomeElements.jsx";
 import SignUp from "./pages/SignUp.jsx";
 import About from "./pages/About.jsx";
 import BasketProduct from "./pages/BasketProduct.jsx";
 import Wishlist from "./pages/Wishlist.jsx";
 import Checkout from "./pages/Checkout.jsx";
+import SelectedProduct from "./pages/SelectedProduct.jsx";
+import Contact from "./pages/Contact.jsx";
 
 function App() {
   const route = createBrowserRouter([
@@ -16,8 +16,14 @@ function App() {
       element: <Home />,
       children: [
         {
-          index: true,
+          path: '/',
           element: <HomeElements />,
+          children: [
+            {
+              path: "selected-product",
+              element: <SelectedProduct />,
+            },
+          ],
         },
         {
           path: "contact",
@@ -41,7 +47,7 @@ function App() {
           children: [
             {
               path: "checkout",
-              element: <Checkout/>
+              element: <Checkout />,
             },
           ],
         },
