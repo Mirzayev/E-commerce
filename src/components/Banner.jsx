@@ -8,6 +8,7 @@ import kalonka from "../assets/images/kalonka.png";
 import plesteshin from "../assets/images/plesteshin.png";
 import car from "../assets/images/car.png";
 import { Button } from "antd";
+import { NavLink } from "react-router-dom";
 
 export default function Banner() {
   const products = [
@@ -86,9 +87,11 @@ export default function Banner() {
                   <h3 className="max-w-[300px] lg:text-[50px] font-medium mt-4">
                     {product.discount}
                   </h3>
+                  <NavLink to="cart">
                   <Button className="bg-transparent text-white mt-5 border-none border-b border-white border-2">
                     Shop Now
                   </Button>
+                  </NavLink>
                 </div>
                 <img  src={product.image} alt={product.title} className=" object-cover lg:w-[400px] w-[200px] " />
               </div>
