@@ -12,7 +12,7 @@ export default function Categories() {
 
         <div className="flex justify-between items-center ">
           <div className="flex items-center gap-20 ">
-            <p className="text-[36px] font-semibold">Browse By Category</p>
+            <p className="md:text-[36px] text-2xl  md:max-w-auto  font-semibold">Browse By Category</p>
           </div>
           <div className="flex items-center gap-1">
             <div className="bg-slate-100 w-[46px] h-[46px] rounded-full  flex items-center justify-center text-xl">

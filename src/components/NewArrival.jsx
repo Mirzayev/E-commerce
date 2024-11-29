@@ -5,7 +5,7 @@ import reklama_5 from '../assets/images/reklama_5.png'
 
 export default function NewArrival() {
   return (
-    <div className="my-[140px] px-4 md:px-0 max-w-[1440px] mx-auto">
+    <div className="lg:my-[140px] px-4 md:px-0 max-w-[1440px] mx-auto my-10">
       <div className="flex items-center gap-2">
         <div className="bg-red-500 w-4 h-9 rounded-md"></div>
         <h3 className="text-red-500 text-base font-semibold">Featured</h3>

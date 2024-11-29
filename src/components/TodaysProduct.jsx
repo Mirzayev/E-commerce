@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import joystik from "../assets/images/plesteshin.png";
 import klaviatura from "../assets/images/klaviatura.png";
-import televizor from "../assets/images/televezor.png";
+import televizor from "../assets/images/televizor.png";
 import chair from "../assets/images/stul.png";
 import { Button } from "antd";
 
@@ -132,8 +132,7 @@ export default function TodaysProduct() {
             View All Products
           </Button>
         </div>
-        <hr className="bg-slate-400 h-[3px] my-4" />
-        <canvas id="myCanvas" width="200" height="200"></canvas>
+       
       </div>
     </div>
   );

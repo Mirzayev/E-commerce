@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import joystik from "../assets/images/plesteshin.png";
 import klaviatura from "../assets/images/klaviatura.png";
-import televizor from "../assets/images/televezor.png";
+import televizor from "../assets/images/televizor.png";
 import chair from '../assets/images/stul.png'
 import { Button } from "antd";
 
@@ -97,16 +97,16 @@ export default function MonthProduct() {
   }, []);
 
   return (
-    <div className="max-w-[1440px] mx-auto px-5">
+    <div className="max-w-[1440px] mx-auto px-5 my-5">
         <div className="lg:mt-[140px] sm:mt-20 mt-10 lg:mb-[140px]">
       <div className="flex items-center gap-2">
         <div className="bg-red-500 w-4 h-9 rounded-md"></div>
         <h3 className="text-red-500 text-base font-semibold">This month </h3>
       </div>
 
-      <div className="flex justify-between items-center ">
-        <div className="flex items-center gap-20 ">
-          <p className="text-[36px] font-semibold">Best Selling Products</p>
+      <div className="flex justify-between items-center mt-4">
+        <div className="flex items-center gap-20  ">
+          <p className="md:text-[36px] text-2xl font-semibold">Best Selling Products</p>
         </div>
         <div className="flex items-center ">
         <Button type="primary" danger>

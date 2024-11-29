@@ -5,7 +5,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import kalonka from "../assets/images/kalonka.png";
-import camera from "../assets/images/camera.png";
+import plesteshin from "../assets/images/plesteshin.png";
+import car from "../assets/images/car.png";
 import { Button } from "antd";
 
 export default function Banner() {
@@ -18,15 +19,15 @@ export default function Banner() {
     },
     {
       id: 2,
-      title: "Explore the latest smartphone deals!",
+      title: "Explore  smartphone!",
       discount: "Up to 25% off Voucher",
-      image: camera,
+      image: plesteshin,
     },
     {
       id: 3,
-      title: "Stylish and powerful, designed for everyone!",
-      discount: "Up to 10% off Voucher",
-      image: kalonka,
+      title: "Stylish  for everyone!",
+      discount: "Up to 50% off Voucher",
+      image: car,
     },
   ];
 
@@ -75,29 +76,28 @@ export default function Banner() {
           spaceBetween={50}
           slidesPerView={1}
           className="rounded-lg w-full"
+          style={{WebkitTextFillColor: "-moz-initial"}}
         >
           {products.map((product) => (
             <SwiperSlide key={product.id}>
-              <div className="w-full lg:h-[500px] bg-black h-full text-white px-8 py-16 flex items-center justify-between">
+              <div className="w-full lg:h-[500px] bg-black h-full text-white px-8 py-16 flex items-center lg:justify-around justify-between gap-4">
                 <div>
                   <p className="text-[16px]">{product.title}</p>
-                  <h3 className="max-w-[300px] text-[50px] font-medium mt-4">
+                  <h3 className="max-w-[300px] lg:text-[50px] font-medium mt-4">
                     {product.discount}
                   </h3>
                   <Button className="bg-transparent text-white mt-5 border-none border-b border-white border-2">
                     Shop Now
                   </Button>
                 </div>
-                <img  src={product.image} alt={product.title} className=" object-cover" />
+                <img  src={product.image} alt={product.title} className=" object-cover lg:w-[400px] w-[200px] " />
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
 
-      <div className="mt-40">
-        <Outlet />
-      </div>
+    
     </div>
   );
 }
