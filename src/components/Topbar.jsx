@@ -39,7 +39,7 @@ function Topbar() {
         </div>
 
         <div className="hidden md:flex gap-12">
-          {["Home", "Contact", "About", "Sign Up"].map((path, index) => (
+          {["Home", "Contact", "About", "signUp"].map((path, index) => (
             <NavLink
               to={path}
               key={index}
