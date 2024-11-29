@@ -32,16 +32,14 @@ function Topbar() {
 
   return (
     <div className="max-w-[1440px] mx-auto px-5 relative">
-      {/* Topbar */}
+    
       <div className="flex justify-between items-center mt-4 gap-10">
-        {/* Logo */}
         <div className="hidden sm:block">
           <h3 className="text-2xl font-bold text-gray-800">Exclusive</h3>
         </div>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex gap-12">
-          {["/", "contact", "about", "signUp"].map((path, index) => (
+          {["Home", "Contact", "About", "Sign Up"].map((path, index) => (
             <NavLink
               to={path}
               key={index}
@@ -99,7 +97,7 @@ function Topbar() {
         onClick={() => setMenuOpen(false)}
       >
         <div
-          className="bg-white w-[75%] max-w-[300px] h-full p-6 flex flex-col gap-6 shadow-lg"
+          className="bg-white w-[75%] max-w-[300px] h-full p-6 flex flex-col gap-6 shadow-lg relative z-20"
           onClick={(e) => e.stopPropagation()}
         >
           <h3 className="text-xl font-bold text-gray-800">Menu</h3>
