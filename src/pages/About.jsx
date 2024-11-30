@@ -4,7 +4,7 @@ import ourEmployee from "../assets/images/ourEmployee.png";
 import iconShop from "../assets/icons/icon_shop.png";
 import money from "../assets/icons/Icon-Moneybag.png";
 import Tom from  "../assets/images/Tom.png";
-import Emma from "../assets/images/emmaWatson.png";
+import Emma from "../assets/images/EmmaWatson.png";
 import Simth from "../assets/images/Smith.png";
 export default function About() {
   return (
