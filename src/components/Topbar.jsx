@@ -35,12 +35,15 @@ function Topbar() {
         {/* Topbar */}
         <div className="max-w-[1440px] mx-auto px-5">
           <div className="flex justify-between items-center mt-4 gap-10 w-full">
-            <h3 className="text-2xl font-bold text-gray-800 hidden sm:block">
+            <NavLink to="/" className="text-2xl font-bold text-gray-800 hidden sm:block">
               Exclusive
-            </h3>
+            </NavLink>
 
             <div className="hidden md:flex gap-12">
-              {["/home", "/contact", "/about", "/signUp"].map((path, index) => (
+              <NavLink to="/" className="font-mono text-base hover:underline">
+                Home
+              </NavLink>
+              {["/", "/contact", "/about", "/signUp"].map((path, index) => (
                   <NavLink
                       to={path}
                       key={index}
