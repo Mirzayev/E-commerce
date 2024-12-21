@@ -33,7 +33,7 @@ export default function Banner() {
   ];
 
   return (
-      <div className="max-w-[1440px] mx-auto mt-4 lg:mt-[100px] px-5">
+      <div className="max-w-[1440px] mx-auto  lg:mt-[100px] mt-20 px-5">
         <div className="flex items-center justify-between gap-10">
           <div className="md:border-r-2 md:px-4 md:block hidden">
             {[
@@ -77,7 +77,7 @@ export default function Banner() {
                       </h3>
                       <NavLink to="/cart">
                         <Button
-                            className="custom-button mt-5"
+                            className="custom-button mt-5 hover:bg-white hover:text-black"
                             style={{
                               backgroundColor: "transparent",
                               color: "white",

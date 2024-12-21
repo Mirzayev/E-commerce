@@ -40,21 +40,29 @@ function Topbar() {
             </NavLink>
 
             <div className="hidden md:flex gap-12">
-              <NavLink to="/" className="font-mono text-base hover:underline">
+              <NavLink to="/" className={`font-mono text-base transition-all hover:underline ${
+                location.pathname === "/" ? "font-bold text-red-500" : ""
+              }`}>
                 Home
               </NavLink>
-              {["/", "/contact", "/about", "/signUp"].map((path, index) => (
-                  <NavLink
-                      to={path}
-                      key={index}
-                      className={`font-mono text-base hover:underline ${
-                          location.pathname === path ? "font-bold text-red-500" : ""
-                      }`}
-                  >
-                    {path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
-                  </NavLink>
-              ))}
-            </div>
+              <NavLink to="/contact" className={`font-mono text-base transition-all hover:underline ${
+                  location.pathname === "/contact" ? "font-bold text-red-500" : ""
+              }`}>
+                Contact
+              </NavLink>
+              <NavLink to="/about" className={`font-mono text-base transition-all hover:underline ${
+                  location.pathname === "/about" ? "font-bold text-red-500" : ""
+              }`}>
+                About
+              </NavLink>
+              <NavLink to="/signUp" className={`font-mono text-base transition-all hover:underline ${
+                  location.pathname === "/signUp" ? "font-bold text-red-500" : ""
+              }`}>
+                SignUp
+              </NavLink>
+
+
+               </div>
 
             {/* Search Bar and Icons */}
             <div className="flex justify-between w-full md:w-auto items-center gap-4">
@@ -107,18 +115,28 @@ function Topbar() {
                   onClick={(e) => e.stopPropagation()}
               >
                 <h3 className="text-xl font-bold text-gray-800">Menu</h3>
-                {["/home", "/contact", "/about", "/signUp"].map((path, index) => (
-                    <NavLink
-                        to={path}
-                        key={index}
-                        onClick={() => setMenuOpen(false)}
-                        className={`font-mono text-base hover:text-red-500 ${
-                            location.pathname === path ? "font-bold text-red-500" : ""
-                        }`}
-                    >
-                      {path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
-                    </NavLink>
-                ))}
+                <NavLink to="/" className={`font-mono text-base transition-all hover:underline ${
+                    location.pathname === "/" ? "font-bold text-red-500" : ""
+                }`}>
+                  Home
+                </NavLink>
+                <NavLink to="/contact" className={`font-mono text-base transition-all hover:underline ${
+                    location.pathname === "/contact" ? "font-bold text-red-500" : ""
+                }`}>
+                  Contact
+                </NavLink>
+                <NavLink to="/about" className={`font-mono text-base transition-all hover:underline ${
+                    location.pathname === "/about" ? "font-bold text-red-500" : ""
+                }`}>
+                  About
+                </NavLink>
+                <NavLink to="/signUp" className={`font-mono text-base transition-all hover:underline ${
+                    location.pathname === "/signUp" ? "font-bold text-red-500" : ""
+                }`}>
+                  SignUp
+                </NavLink>
+
+
               </div>
             </div>
         )}

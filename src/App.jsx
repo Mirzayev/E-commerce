@@ -44,13 +44,12 @@ function App() {
         {
           path: "cart",
           element: <BasketProduct />,
-          children: [
-            {
-              path: "checkout",
-              element: <Checkout />,
-            },
-          ],
+
         },
+        {
+          path: "cart/checkout",
+          element: <Checkout/>
+        }
       ],
     },
   ]);
