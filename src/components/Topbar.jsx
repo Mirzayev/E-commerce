@@ -18,11 +18,11 @@ function Topbar() {
   };
 
   const items = [
-    { label: "Manage My Account", key: "1", icon: <UserOutlined /> },
+    { label: <NavLink to={"/my-account"}>Manage My Account</NavLink>, key: "1", icon: <UserOutlined /> },
     { label: "My Order", key: "2", icon: <FileDoneOutlined /> },
     { label: "My Cancellations", key: "3", icon: <CloseSquareOutlined /> },
     { label: "My Reviews", key: "4", icon: <StarOutlined /> },
-    { label: "Logout", key: "5", icon: <LogoutOutlined /> },
+    { label: <NavLink to={"/signUp"}>Logout</NavLink>, key: "5", icon: <LogoutOutlined /> },
   ];
 
   const menuProps = {

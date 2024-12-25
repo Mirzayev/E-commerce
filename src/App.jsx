@@ -8,6 +8,7 @@ import Wishlist from "./pages/Wishlist.jsx";
 import Checkout from "./pages/Checkout.jsx";
 import SelectedProduct from "./pages/SelectedProduct.jsx";
 import Contact from "./pages/Contact.jsx";
+import MyAccount from "./pages/MyAccount.jsx";
 
 function App() {
   const route = createBrowserRouter([
@@ -33,10 +34,7 @@ function App() {
           path: "about",
           element: <About />,
         },
-        {
-          path: "signUp",
-          element: <SignUp />,
-        },
+
         {
           path: "wishlist",
           element: <Wishlist />,
@@ -49,8 +47,16 @@ function App() {
         {
           path: "cart/checkout",
           element: <Checkout/>
-        }
+        },
+        {
+          path: "my-account",
+          element: <MyAccount />,
+        },
       ],
+    },
+    {
+      path: "signUp",
+      element: <SignUp />,
     },
   ]);
 

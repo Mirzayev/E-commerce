@@ -1,9 +1,10 @@
 import { Button } from "antd";
 import basket from "../assets/images/registr.png";
+import {NavLink} from "react-router-dom";
 
 export default function SignUp() {
   return (
-    <div className="lg:mt-[60px] mt-10 flex flex-col lg:flex-row gap-10 lg:gap-[130px] items-center px-3 max-w-[1920px] mx-auto">
+    <div className="h-[100vh] flex flex-col lg:flex-row gap-10 lg:gap-[130px] items-center px-3 max-w-[1920px] mx-auto">
       <img
         src={basket}
         className="w-full max-w-[500px] lg:max-w-[805px] object-cover"
@@ -44,6 +45,7 @@ export default function SignUp() {
             Log in
           </a>
         </p>
+        <NavLink className={"flex justify-center items-center my-4 text-orange-400 font-semibold border  py-2 hover:bg-orange-400 hover:text-white rounded-lg transition-all"} to={"/"}>Return to Home</NavLink>
       </div>
     </div>
   );
