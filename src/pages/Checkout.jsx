@@ -1,6 +1,9 @@
 import plesteshin from '../assets/images/plesteshin.png'
 import televizor from '../assets/images/televizor.png'
-import {NavLink} from "react-router-dom";
+import visa from '../assets/images/Visa.png'
+import Masterkad from '../assets/images/Mastercard.png'
+import iKash from '../assets/images/iKash.png'
+import {Button} from "antd";
 
 export default function Checkout() {
 
@@ -9,40 +12,40 @@ export default function Checkout() {
         <div className="text-black text-lg relative z-20 mt-20 max-w-[1440px] mx-auto px-5">
             <h3 className={"text-[30px] font-semibold  lg:mt-40 mt-[100px] mb-10 "}>Billing Details</h3>
 
-            <div className={"lg:flex items-center  justify-between"}>
+            <div className={"lg:flex items-center  gap-[200px]"}>
                 <div>
                     <div>
-                        <p className={"text-[14px] text-slate-400"}>first name*</p>
+                        <p className={"text-[14px] text-slate-400 lg:mt-8 mt-3"}>first name*</p>
                         <input type="text"
                                className={"lg:min-w-[470px] outline-none py-2  w-full rounded-md bg-slate-100"}/>
                     </div>
                     <div>
-                        <p className={"text-[14px] text-slate-400"}>Company name</p>
+                        <p className={"text-[14px] text-slate-400 lg:mt-8 mt-3"}>Company name</p>
                         <input type="text"
                                className={"lg:min-w-[470px] outline-none py-2  w-full rounded-md bg-slate-100"}/>
                     </div>
                     <div>
-                        <p className={"text-[14px] text-slate-400"}>Street adress*</p>
+                        <p className={"text-[14px] text-slate-400 lg:mt-8 mt-3"}>Street adress*</p>
                         <input type="text"
                                className={"lg:min-w-[470px] outline-none py-2  w-full rounded-md bg-slate-100"}/>
                     </div>
                     <div>
-                        <p className={"text-[14px] text-slate-400"}>Apartment, floor, etc. (optional)</p>
+                        <p className={"text-[14px] text-slate-400 lg:mt-8 mt-3"}>Apartment, floor, etc. (optional)</p>
                         <input type="text"
                                className={"lg:min-w-[470px] outline-none py-2  w-full rounded-md bg-slate-100"}/>
                     </div>
                     <div>
-                        <p className={"text-[14px] text-slate-400"}>Town/City*</p>
+                        <p className={"text-[14px] text-slate-400 lg:mt-8 mt-3"}>Town/City*</p>
                         <input type="text"
                                className={"lg:min-w-[470px] outline-none py-2  w-full rounded-md bg-slate-100"}/>
                     </div>
                     <div>
-                        <p className={"text-[14px] text-slate-400"}>Phone Number*</p>
+                        <p className={"text-[14px] text-slate-400 lg:mt-8 mt-3"}>Phone Number*</p>
                         <input type="text"
                                className={"lg:min-w-[470px] outline-none py-2  w-full rounded-md bg-slate-100"}/>
                     </div>
                     <div>
-                        <p className={"text-[14px] text-slate-400"}>Email Address*</p>
+                        <p className={"text-[14px] text-slate-400 lg:mt-8 mt-3"}>Email Address*</p>
                         <input type="text"
                                className={"lg:min-w-[470px] outline-none py-2  w-full rounded-md bg-slate-100"}/>
                     </div>
@@ -52,7 +55,7 @@ export default function Checkout() {
                     </div>
                 </div>
 
-                <div>
+                <div className={"w-full"}>
                     <div className={"flex items-center justify-between my-4 lg:gap-40"}>
                         <div className={"flex items-center  gap-3"}>
                             <img className="max-w-20" src={plesteshin} alt=""/>
@@ -85,15 +88,43 @@ export default function Checkout() {
                         </div>
                     </div>
                     <div>
+                        <form action="">
+                            <label htmlFor="">
+                                <div className={"flex items-center justify-between"}>
+                                    <div className={"flex items-center gap-2"}>
+                                        <input name="choice" className={""} type="radio"/>
+                                        <p className={"font-semibold text-[16px]"}>Bank</p>
+                                    </div>
+                                    <div className={"flex items-center gap-2"}>
+                                        <img className={"object-contain w-14"} src={iKash} alt=""/>
+                                        <img className={"object-contain w-14"} src={visa} alt=""/>
+                                        <img className={"object-contain w-14"} src={Masterkad} alt=""/>
+                                    </div>
 
-                        <div className={"flex items-center gap-2"}>
-                            <input className={""} type="radio"/>
-                            <p className={"font-semibold text-[16px]"}>Bank</p>
+                                </div>
+
+
+                            </label>
+                            <label htmlFor="">
+                                <div className={"flex items-center gap-2"}>
+                                    <input name="choice" className={""} type="radio"/>
+                                    <p className={"font-semibold text-[16px]"}>Cash on delivery</p>
+                                </div>
+                            </label>
+
+                        </form>
+
+
+                        <div className="flex h-[40px] items-center gap-4 w-full md:w-auto my-8 w-full">
+                            <input
+                                type="text"
+                                placeholder="Coupon Code"
+                                className="h-full w-2/3  sm:px-6 border border-slate-200 outline-none rounded-lg  md:w-auto"
+                            />
+                            <Button className="h-full px-4 bg-red-500 text-white">Apply Coupon</Button>
                         </div>
-                        <div className={"flex items-center gap-2"}>
-                            <input className={""} type="radio"/>
-                            <p className={"font-semibold text-[16px]"}>Cash on delivery</p>
-                        </div>
+
+                        <Button className={"bg-red-500 text-white h-[40px] px-10"}>Palece Order</Button>
                     </div>
                 </div>
             </div>
