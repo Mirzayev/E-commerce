@@ -9,6 +9,7 @@ import Checkout from "./pages/Checkout.jsx";
 import SelectedProduct from "./pages/SelectedProduct.jsx";
 import Contact from "./pages/Contact.jsx";
 import MyAccount from "./pages/MyAccount.jsx";
+import NotFound from "./components/NotFound.jsx";
 
 function App() {
   const route = createBrowserRouter([
@@ -52,12 +53,17 @@ function App() {
           path: "my-account",
           element: <MyAccount />,
         },
+        {
+          path: "*",
+          element: <NotFound />,
+        },
       ],
     },
     {
       path: "signUp",
       element: <SignUp />,
     },
+
   ]);
 
   return (
