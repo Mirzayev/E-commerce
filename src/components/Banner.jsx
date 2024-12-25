@@ -58,7 +58,7 @@
 
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
-                navigation
+                // navigation
                 pagination={{ clickable: true }}
                 autoplay={{ delay: 3000 }}
                 loop={true}

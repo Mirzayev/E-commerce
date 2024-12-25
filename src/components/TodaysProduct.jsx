@@ -93,11 +93,11 @@ export default function TodaysProduct() {
               </div>
 
               <div className="flex items-center gap-2">
-                <div className="star-rating">
+                <div className="star-rating ">
                   {[...Array(5)].map((_, index) => {
                     const starValue = index + 1;
                     return (
-                      <label key={starValue}>
+                      <label key={starValue} >
                         <input
                           type="radio"
                           name={`rating-${product.id}`}
