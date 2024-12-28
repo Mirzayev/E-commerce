@@ -1,3 +1,5 @@
+import {NavLink} from "react-router-dom";
+
 export default function Footer() {
     return (
       <div className="relative bg-black text-white mt-10 w-full px-5 py-10">
@@ -27,23 +29,23 @@ export default function Footer() {
   
          <div className="flex items-start w-full justify-between px-3">
 
-         <div>
-            <h3 className="text-[20px]">Account</h3>
-            <p className="mt-6 cursor-pointer hover:text-slate-300 transition-all">
+         <div className={"flex flex-col "}>
+            <h3 className="text-[20px] ">Account</h3>
+            <NavLink to={"my-account"} className="mt-6 cursor-pointer block  hover:text-slate-300 transition-all">
               My Account
-            </p>
-            <p className="my-4 cursor-pointer hover:text-slate-300 transition-all">
+            </NavLink>
+            <NavLink to={"signUp"} className="my-4  cursor-pointer hover:text-slate-300 transition-all">
               Login / Register
-            </p>
-            <p className="cursor-pointer hover:text-slate-300 transition-all">
+            </NavLink>
+            <NavLink to={"cart"} className="cursor-pointer hover:text-slate-300 transition-all">
               Cart
-            </p>
-            <p className="my-4 cursor-pointer hover:text-slate-300 transition-all">
+            </NavLink>
+            <NavLink to={"wishlist"} className="my-4 cursor-pointer hover:text-slate-300 transition-all">
               Wishlist
-            </p>
-            <p className="cursor-pointer hover:text-slate-300 transition-all">
+            </NavLink>
+            <NavLink to={"/"} className="cursor-pointer hover:text-slate-300 transition-all">
               Shop
-            </p>
+            </NavLink>
           </div>
   
           <div>
