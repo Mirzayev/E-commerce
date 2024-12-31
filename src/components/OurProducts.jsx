@@ -124,7 +124,7 @@ export default function OurProducts() {
 
       <div className="lg:grid lg:grid-cols-4 flex overflow-x-auto md:gap-[30px] gap-4  mt-10">
         {products.map((product) => (
-          <div className="">
+          <div key={product.id} className="">
             <div className="md:w-[270px]   md:h-[250px] w-[160px] h-[160px] px-3 py-3 bg-slate-100 relative flex items-center justify-center">
               <p className="absolute bg-red-600 text-white top-1 left-3 text-xs px-2 py-1 rounded-[5px] ">
                 {product.discount}

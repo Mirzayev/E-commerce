@@ -2,8 +2,9 @@ import { Button } from "antd";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-export default function BasketProduct() {
+export default function BasketProduct({items}) {
   const [product, setProduct] = useState(1);
+  console.log(items)
 
   const formattedPrice = (price) =>
     new Intl.NumberFormat("en-US", {

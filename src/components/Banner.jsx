@@ -1,4 +1,3 @@
-  import { Outlet } from "react-router-dom";
   import { SwiperSlide, Swiper } from "swiper/react";
   import { Navigation, Pagination, Autoplay } from "swiper";
   import "swiper/css";

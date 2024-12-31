@@ -5,12 +5,14 @@ import televizor from "../assets/images/televizor.png";
 import chair from "../assets/images/stul.png";
 import { Button } from "antd";
 
-export default function TodaysProduct() {
+export default function TodaysProduct({onAddCart}) {
+
+
   const products = [
     { id: 1, name: "HAVIT HV-G92 Gamepad", discount: "-40%", price: 120, originalPrice: 160, image: joystik },
     { id: 2, name: "AK-900 Wired Keyboard", discount: "-35%", price: 960, originalPrice: 1160, image: klaviatura },
     { id: 3, name: "IPS LCD Gaming Monitor", discount: "-30%", price: 370, originalPrice: 400, image: televizor },
-    { id: 4, name: "S-Series Comfort Chair", discount: "-25%", price: 375, originalPrice: 400, image: chair }, 
+    { id: 4, name: "S-Series Comfort Chair", discount: "-25%", price: 375, originalPrice: 400, image: chair },
     { id: 5, name: "HAVIT HV-G92 Gamepad", discount: "-40%", price: 120, originalPrice: 160, image: joystik },
     { id: 6, name: "AK-900 Wired Keyboard", discount: "-35%", price: 960, originalPrice: 1160, image: klaviatura },
     { id: 7, name: "IPS LCD Gaming Monitor", discount: "-30%", price: 370, originalPrice: 400, image: televizor },
@@ -23,22 +25,22 @@ export default function TodaysProduct() {
   const [starSize, setStarSize] = useState(32);
 
   useEffect(() => {
-    const handleResize = () => {
+    const updateStarSize = () => {
       const screenWidth = window.innerWidth;
-      if (screenWidth < 768) {
-        setStarSize(24);
-      } else if (screenWidth < 1024) {
-        setStarSize(32);
-      } else {
-        setStarSize(40);
-      }
+      setStarSize(screenWidth < 768 ? 24 : screenWidth < 1024 ? 32 : 40);
     };
 
-    handleResize();
-    window.addEventListener("resize", handleResize);
+    updateStarSize();
+    window.addEventListener("resize", updateStarSize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", updateStarSize);
   }, []);
+
+  const toggleFavorite = (productId) => {
+    setFavorites((prev) =>
+        prev.includes(productId) ? prev.filter((id) => id !== productId) : [...prev, productId]
+    );
+  };
 
   const handleHeartClick = (product) => {
     if (favorites.includes(product.id)) {
@@ -56,6 +58,11 @@ export default function TodaysProduct() {
     setHover((prev) => ({ ...prev, [productId]: value }));
   };
 
+  function handleAddClick(product) {
+    onAddCart(product)
+  }
+  handleAddClick()
+
   return (
     <div className="max-w-[1440px] mx-auto px-5">
       <div className="lg:mt-[140px] sm:mt-20 mt-10">
@@ -71,7 +78,7 @@ export default function TodaysProduct() {
                 <p className="absolute bg-red-600 text-white top-1 left-3 text-xs px-2 py-1 rounded-[5px] ">
                   {product.discount}
                 </p>
-                <Button className={"absolute bottom-0 bg-black text-white font-medium w-full text-center hidden group-hover:block transition-all"}>Add to cart</Button>
+                <Button onClick={() => handleAddClick(product)} className={"absolute bottom-0 bg-black text-white font-medium w-full text-center hidden group-hover:block transition-all"}>Add to cart</Button>
                 <div className="bg-white md:w-6 w-5 md:h-6 h-5 flex items-center justify-center rounded-full absolute md:top-4 top-2 right-2">
                   <i
                     className={`cursor-pointer ${
@@ -133,7 +140,7 @@ export default function TodaysProduct() {
             View All Products
           </Button>
         </div>
-       
+
       </div>
     </div>
   );
