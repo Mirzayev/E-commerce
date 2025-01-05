@@ -11,7 +11,7 @@ export default function AddCartElements() {
 
     return (
         <div>
-            <TodaysProduct onAddCart={handleAddToCart} />
+            {/*<TodaysProduct onAddCart={handleAddToCart} />*/}
             <BasketProduct items={cartItems} />
         </div>
     );
