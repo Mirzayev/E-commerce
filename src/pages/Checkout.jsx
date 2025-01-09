@@ -92,7 +92,7 @@ export default function Checkout() {
                             <label htmlFor="">
                                 <div className={"flex items-center justify-between"}>
                                     <div className={"flex items-center gap-2"}>
-                                        <input name="choice" className={""} type="radio"/>
+                                        <input name="choice" className={"cursor-pointer"} type="radio"/>
                                         <p className={"font-semibold text-[16px]"}>Bank</p>
                                     </div>
                                     <div className={"flex items-center gap-2"}>
@@ -105,9 +105,9 @@ export default function Checkout() {
 
 
                             </label>
-                            <label htmlFor="">
+                            <label className={""} htmlFor="">
                                 <div className={"flex items-center gap-2"}>
-                                    <input name="choice" className={""} type="radio"/>
+                                    <input name="choice" className={"cursor-pointer"} type="radio"/>
                                     <p className={"font-semibold text-[16px]"}>Cash on delivery</p>
                                 </div>
                             </label>
@@ -115,7 +115,7 @@ export default function Checkout() {
                         </form>
 
 
-                        <div className="flex h-[40px] items-center gap-4 w-full md:w-auto my-8 w-full">
+                        <div className="flex h-[40px] items-center gap-4 w-full md:w-auto my-8 ">
                             <input
                                 type="text"
                                 placeholder="Coupon Code"

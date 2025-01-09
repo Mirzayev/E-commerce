@@ -12,6 +12,10 @@ export default function TodaysProduct({ onAddCart }) {
     { id: 2, name: "AK-900 Wired Keyboard", discount: "-35%", price: 960, originalPrice: 1160, image: klaviatura },
     { id: 3, name: "IPS LCD Gaming Monitor", discount: "-30%", price: 370, originalPrice: 400, image: televizor },
     { id: 4, name: "S-Series Comfort Chair", discount: "-25%", price: 375, originalPrice: 400, image: chair },
+    { id: 5, name: "HAVIT HV-G92 Gamepad", discount: "-40%", price: 130, originalPrice: 160, image: joystik },
+    { id: 6, name: "AK-900 Wired Keyboard", discount: "-35%", price: 900, originalPrice: 1160, image: klaviatura },
+    { id: 7, name: "IPS LCD Gaming Monitor", discount: "-30%", price: 340, originalPrice: 400, image: televizor },
+    { id: 8, name: "S-Series Comfort Chair", discount: "-25%", price: 335, originalPrice: 400, image: chair },
   ];
 
   const [favorites, setFavorites] = useState([]);
@@ -48,7 +52,7 @@ export default function TodaysProduct({ onAddCart }) {
   };
 
   return (
-      <div className="max-w-[1440px] mx-auto px-5">
+      <div className="max-w-[1440px] mx-auto px-5 lg:mb-[100px] mb-10">
         <div className="lg:mt-[140px] sm:mt-20 mt-10">
           <h3 className="text-red-500 text-base font-semibold">Today's Products</h3>
 
