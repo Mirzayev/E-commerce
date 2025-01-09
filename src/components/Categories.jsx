@@ -4,7 +4,7 @@ import smartwatch from '../assets/icons/smartwatch.png'
 export default function Categories() {
   return (
     <div>
-      <div className="max-w-[1440px] mx-auto px-5 ">
+      <div className="max-w-[1440px] mx-auto px-5 my-10">
         <div className="flex items-center gap-2">
           <div className="bg-red-500 w-4 h-9 rounded-md"></div>
           <h3 className="text-red-500 text-base font-semibold">Categories </h3>
@@ -24,13 +24,13 @@ export default function Categories() {
           </div>
         </div>
 
-        <div className="flex justify-between mt-16 gap-4 overflow-x-auto">
+        <div className="flex justify-between lg:mt-16 mt-8 gap-4 overflow-x-auto">
           <div className="border shadow-md cursor-pointer min-w-[120px] sm:min-w-[170px] h-[145px] group flex flex-col items-center justify-center rounded-lg hover:bg-red-500 transition-all">
-            <i class="fa-solid fa-mobile-screen text-3xl group-hover:text-white transition-all  "></i>
+            <i className="fa-solid fa-mobile-screen text-3xl group-hover:text-white transition-all  "></i>
             <p className="mt-4 group-hover:text-white transition-all font-semibold">Phone</p>
           </div>
           <div className="border shadow-md cursor-pointer min-w-[120px] sm:min-w-[170px] h-[145px] group flex items-center justify-center flex-col rounded-lg hover:bg-red-500 transition-all">
-            <i class="fa-solid fa-computer text-3xl group-hover:text-white transition-all  "></i>{" "}
+            <i className="fa-solid fa-computer text-3xl group-hover:text-white transition-all  "></i>{" "}
             <p className="mt-4 group-hover:text-white transition-all font-semibold">Computer</p>
           </div>
           <div className="border shadow-md cursor-pointer min-w-[120px] sm:min-w-[170px] h-[145px] group flex items-center justify-center flex-col rounded-lg hover:bg-red-500 transition-all">
@@ -51,7 +51,7 @@ export default function Categories() {
           </div>
         </div>
       </div>
-      <hr className='my-16 h-1 w-full' />
+      <hr className='lg:my-16 h-1 my-8 w-full' />
 
     </div>
   );

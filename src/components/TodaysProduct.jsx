@@ -56,7 +56,7 @@ export default function TodaysProduct({ onAddCart }) {
         <div className="lg:mt-[140px] sm:mt-20 mt-10">
           <h3 className="text-red-500 text-base font-semibold">Today's Products</h3>
 
-          <div className="flex md:gap-[30px] gap-4 overflow-x-auto mt-10">
+          <div className="flex md:gap-[30px]  gap-10 overflow-x-auto mt-10">
             {products.map((product) => (
                 <div key={product.id}>
                   <div className="md:w-[270px] md:h-[250px] w-[160px] h-[160px] px-3 py-3 bg-slate-100 relative flex items-center justify-center group">
@@ -118,7 +118,7 @@ export default function TodaysProduct({ onAddCart }) {
                         );
                       })}
                     </div>
-                    <h3>({ratings[product.id] || 0} reviews)</h3>
+                    <h3 className={"text-[12px] lg:text-[16px]"}>({ratings[product.id] || 0} reviews)</h3>
                   </div>
                 </div>
             ))}

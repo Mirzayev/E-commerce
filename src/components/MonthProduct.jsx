@@ -20,7 +20,7 @@ export default function MontProduct() {
   const [favorites, setFavorites] = useState([]);
   const [ratings, setRatings] = useState({});
   const [hover, setHover] = useState({});
-  const [starSize, setStarSize] = useState(32);
+  const [starSize, setStarSize] = useState(25);
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,7 +28,7 @@ export default function MontProduct() {
       if (screenWidth < 768) {
         setStarSize(24);
       } else if (screenWidth < 1024) {
-        setStarSize(32);
+        setStarSize(25);
       } else {
         setStarSize(40);
       }
@@ -68,7 +68,7 @@ export default function MontProduct() {
             <Button className="px-12 py-3 h-full bg-red-500 text-white">View All</Button>
           </div>
 
-        <div style={{scrollbarWidth: 'none'}} className="flex md:gap-[30px] gap-4 overflow-x-auto mt-10">
+        <div style={{scrollbarWidth: 'none'}} className="flex md:gap-[30px] gap-8 overflow-x-auto mt-10">
           {products.map((product) => (
             <div key={product.id}>
               <div className="md:w-[270px] md:h-[250px] w-[160px] h-[160px] px-3 py-3 bg-slate-100 relative flex items-center justify-center">
@@ -125,7 +125,7 @@ export default function MontProduct() {
                     );
                   })}
                 </div>
-                <h3>({ratings[product.id] || 0} reviews)</h3>
+                <h3 className={"text-[12px] lg:text-[16px]"}>({ratings[product.id] || 0} reviews)</h3>
               </div>
             </div>
           ))}
